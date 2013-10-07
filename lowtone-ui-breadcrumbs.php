@@ -33,6 +33,12 @@ namespace lowtone\ui\breadcrumbs {
 
 				add_shortcode("breadcrumbs", "lowtone\\ui\\breadcrumbs\\breadcrumbs");
 
+				// Register textdomain
+				
+				add_action("plugins_loaded", function() {
+					load_plugin_textdomain("lowtone_ui_breadcrumbs", false, basename(__DIR__) . "/assets/languages");
+				});
+
 			}
 		));
 
